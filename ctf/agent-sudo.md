@@ -16,5 +16,9 @@ fiquei um tempinho pensando de novo nessa pista uns 3 minutos, logo depois perce
 e logo fui testando mais usuários aleatóriamente, assim como fiz com o agente "R" mas nenhum funcionou até eu testar o agente "C" e recebi isso:
 
 ```Attention chris, Do you still remember our deal? Please tell agent J about the stuff ASAP. Also, change your god damn password, is weak!```
-o nome "Chris" pode ser uma pista, mas eu fui logo no agente "J", obviamente fiz um BF (brute force) na senha dele, a questão era só "no ssh ou no ftp?"
-então pensei logo em seguida, na dúvida faz nos dois
+# Brute Force
+obviamente o nome do agente "C" é "C" de Chris, logo em seguida como conseguimos um usuário, pensei em fazer um BF (Brute Force) com o usuário Chris,
+a questão era sò "no ssh ou no ftp?" não durou dois segundos e pensei "na dúvida faz nos dois", foi o quê eu fiz, o login que obtive demorou 217 tentativas,
+```Hydra -L Chris -P rockyou.txt ftp://10.10.231.2/``` Credenciais obtidas:
+
+```login: Chris``` ```password: cry...(password pela metade)```
