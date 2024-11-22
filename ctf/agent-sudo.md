@@ -22,3 +22,7 @@ a questão era sò "no ssh ou no ftp?" não durou dois segundos e pensei "na dú
 ```Hydra -L Chris -P rockyou.txt ftp://10.10.231.2/``` Credenciais obtidas:
 
 ```login: Chris``` ```password: cry...(password pela metade)```
+entrei no ftp do Chris com a senha que consegui e consegui 3 arquivos, 2 eram fotos e 1 era uma mensagem:
+
+```Dear agent J, All these alien like photos are fake! Agent R stored the real picture inside your directory. Your login password is somehow stored in the fake picture. It shouldn't be a problem for you. From, Agent C```
+pensei logo em seguida, Esteganografia, 
