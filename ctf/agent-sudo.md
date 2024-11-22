@@ -16,3 +16,5 @@ fiquei um tempinho pensando de novo nessa pista uns 3 minutos, logo depois perce
 e logo fui testando mais usuários aleatóriamente, assim como fiz com o agente "R" mas nenhum funcionou até eu testar o agente "C" e recebi isso:
 
 ```Attention chris, Do you still remember our deal? Please tell agent J about the stuff ASAP. Also, change your god damn password, is weak!```
+o nome "Chris" pode ser uma pista, mas eu fui logo no agente "J", obviamente fiz um BF (brute force) na senha dele, a questão era só "no ssh ou no ftp?"
+então pensei logo em seguida, na dúvida faz nos dois
