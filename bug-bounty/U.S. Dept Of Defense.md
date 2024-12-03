@@ -31,4 +31,8 @@ se fosse um firewall burlar e mostrar que eles estavam vulneráveis mas
 isso já seria exploração e eles eram muitos rigorosos sobre isso
 então como no primeiro Entry-Point dropei esse
 
-# 
+# Cors Missconfig
+depois disso um amigo encontrou um Cors Missconfig e me pediu pra validar, o Cors Missconfig
+e uma vulnerabilidade onde o Cors que é um mecanismo de segurança que é implementado em
+navegadores pra permitir que recursos de um domínio sejam acessados por scripts em outro 
+domínio (utilizado em aplicações web quando se é necessário diferentes serviços podem precisar interagir entre si)
