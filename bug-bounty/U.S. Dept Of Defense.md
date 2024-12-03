@@ -3,6 +3,7 @@
 encontrei 2 possíveis entry points em um dos maiores sites do dept de defesa dos eua,
 e um válido, o site era do centro de crimes cibernéticos -> encontrei ele em um programa
 de bug bounty na HackerOne
+
 # SSL mal configurado
 verifiquei o site e achei o primeiro possível entry point
 no certificado SSL do site, onde o certificado SSL não correspondia ao CN (common name)
@@ -11,3 +12,15 @@ de spoofing (se passar por algo como fingir ser o site)
 depois de tentar validar o entry point desisti dela porquê os requerimentos
 do escopo do programa de bug bounty do dept de defesa era muito rigoroso
 e não permitia nada relacionado a exploração de vulnerabilidades encontradas
+e eu iria quebrar a cabeça pensando como iria validar essa vulnerabilidade
+sem explorar
+
+# ClickJacking
+o segundo possível entry-point foi uma possível vulnerabilidade de click jacking
+foi fácil encontrar, usei o curl pra listar as respostas dos headers do site
+quando recebi notei a falta do header ```X-frame-options``` sem ele atacantes
+podem fazer ataques Click-Jacking onde ele engana o usuário fazendo
+ele clicar em algo diferente do que ele acha que é, ele faz isso
+sobrepondo páginas, ele faz isso sobrepondo uma página legítima como
+um banco em outra sobrepondo também os botões, tentei testar o Click-jacking
+mas não tive sucesso, 
