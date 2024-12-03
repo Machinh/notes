@@ -16,11 +16,19 @@ e eu iria quebrar a cabeça pensando como iria validar essa vulnerabilidade
 sem explorar
 
 # ClickJacking
-o segundo possível entry-point foi uma possível vulnerabilidade de click jacking
+o segundo possível Entry-Point foi uma possível vulnerabilidade de click jacking
 foi fácil encontrar, usei o curl pra listar as respostas dos headers do site
 quando recebi notei a falta do header ```X-frame-options``` sem ele atacantes
 podem fazer ataques Click-Jacking onde ele engana o usuário fazendo
 ele clicar em algo diferente do que ele acha que é, ele faz isso
 sobrepondo páginas, ele faz isso sobrepondo uma página legítima como
 um banco em outra sobrepondo também os botões, tentei testar o Click-jacking
-mas não tive sucesso, 
+mas não tive sucesso, eu estava certo que o site estava vulnerável a
+Click-jacking mas algo no backend deles impedia isso, talvez um
+firewall ou alguma política que impedia a requisição do iframe pra
+sobrepor a página em outra, pensei em descobrir qual era essa configuração,
+se fosse um firewall burlar e mostrar que eles estavam vulneráveis mas
+isso já seria exploração e eles eram muitos rigorosos sobre isso
+então como no primeiro Entry-Point dropei esse
+
+# 
