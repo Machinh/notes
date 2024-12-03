@@ -36,3 +36,27 @@ depois disso um amigo encontrou um Cors Missconfig e me pediu pra validar, o Cor
 e uma vulnerabilidade onde o Cors que é um mecanismo de segurança que é implementado em
 navegadores pra permitir que recursos de um domínio sejam acessados por scripts em outro 
 domínio (utilizado em aplicações web quando se é necessário diferentes serviços podem precisar interagir entre si)
+a segurança do cors ajuda a domínios a evitar Cross-site scripting(XSS) e Cross-site Forgery (CSRF), permitindo
+que os navegadores controlem quais as origens que podem acessar seus recursos.
+
+# 
+
+# Configuração certa do Cors
+
+1. especificar origens confiáveis
+em vez de permitir todas as origens (*), especifique quais domínios tẽm permissão para acessar os recursos
+```Exemplo: Access-Control-Allow-Origin: https://www.exemplo.com```
+
+2. limitar métodos permitidos
+Permita apenas os métodos HTTP que são realmente necessários para a aplicação. Por exemplo, se você só precisa de GET e POST, configure assim:
+```Exemplo: Access-Control-Allow-Methods: GET, POST ```
+
+3. Restringir cabeçalhos permitidos
+Permita apenas os cabeçalhos que são necessários para suas solicitações. Por exemplo, se você precisa de Content-Type e um cabeçalho personalizado
+```Exemplo: Access-Control-Allow-Headers: Content-Type, X-Custom-Header```
+
+4. Controlar credenciais
+Se a sua aplicação precisa enviar cookies ou autenticação, você deve habilitar o suporte a credenciais, mas esteja ciente de que isso requer uma origem específica, não pode ser (*)
+```Exemplo: Access-Control-Allow-Credentials: true```
+E, neste caso, o cabeçalho Access-Control-Allow-Origin não pode ser *:
+```Exemplo como deve ser: Access-Control-Allow-Origin: https://www.exemplo.com```
